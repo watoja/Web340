@@ -1,6 +1,310 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+/* --- (Mobile First) --- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f0f0f0; /* Assuming the background is light grey outside the main container */
+}
+
+/* --- Site Header Styles --- */
+
+.site-header {
+    /* Use Flexbox to align items horizontally */
+    display: flex;
+    /* Space out the logo and account link */
+    justify-content: space-between;
+    /* Vertically center the items */
+    align-items:initial;
+    color: white; /* Text color */
+    padding: 5px 10px; /* Padding inside the header */
+    border-bottom: 5px solid #00bcd4; /* Teal border at the bottom */
+}
+
+.site-header h1 {
+    
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.site-header a {
+    /* Set text color to white */
+    color:black;
+}
+
+.my-account {
+    /* Style the MY ACCOUNT link */
+    font-size: 0.8em;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.cse{
+     /* Remove underline from link */
+    text-decoration: none;
+}
+
+/* --- Main Navigation Styles --- */
+
+.main-nav {
+    background-color: #333; /* Dark gray background */
+    margin: 0 auto;
+}
+
+.main-nav ul {
+    /* Use Flexbox to arrange list items horizontally */
+    display: flex;
+    /* Remove padding/margin and list styles */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* Ensure the list items fill the entire width of the nav bar */
+    justify-content: space-around;
+}
+
+.main-nav li {
+    /*  list item flexible and equally sized */
+    flex-grow: 1;
+    text-align: center; 
+}
+
+.main-nav a {
+    
+    display: block;
+    padding: 10px 5px; /* Vertical and horizontal padding */
+    text-decoration: none;
+    color: white; /* Default link text color */
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.2s; 
+}
+
+/* Highlight for the currently active page (Home) */
+.main-nav a.active {
+    border-radius:10px ;
+    color: white; 
+}
+
+/* Hover effect for all links */
+.main-nav a:hover,
+.main-nav a:focus {
+    background-color: white; 
+    color: black; 
+    border-radius:10px ;
+}
+
+
+.home {
+    max-width: 500px; /* Max width for mobile-first design */
+    margin: 0 auto;
+    padding: 10px;
+    background-color: white; /* White background for the content area */
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    padding-top: 10px; /* Adding some space above the main heading */
+}
+
+h3 {
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+    color: black;
+}
+
+.highlight {
+    color: #171818;
+}
+
+ul {
+    list-style-type: none; /* Removing bullet points */
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 1em;
+}
+
+/* Sections */
+section {
+    margin-bottom: 2em;
+}
+
+/* --- Delorean Info (Intro Section) --- */
+
+.delorean-section {
+    display: flex;
+    flex-direction: column; /* Stack info and image vertically on mobile */
+    align-items: flex-start;
+}
+
+.delorean-info {
+    order:2 ; /* Put info below the image initially */
+    padding-bottom: 10px;
+}
+
+.delorean-info ul {
+    color: #00bcd4; 
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.delorean-section img {
+    max-width: 100%;
+    height: auto;
+    order: 1; /* Image first on mobile */
+    margin-bottom: 15px;
+}
+
+/* "Own Today" Button */
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* --- Upgrades Section --- */
+
+.upgrades h3 {
+    margin-top: 1em;
+}
+
+.upgrade-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
+    gap: 10px; /* Space between grid items */
+}
+
+.upgrade-item {
+    text-align: center;
+    background-color: #00bcd4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.upgrade-item img {
+    width: 100%;
+    max-width: 100px; 
+    height: auto;
+    display: block; /* Remove extra space below image */
+    margin: 0 auto 5px; /* Center image */
+}
+
+.upgrade-item a {
+    color: black; /* Link text color */
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 0.9em;
+    display: block; /* Make the link take full width */
+}
+
+/* --- Reviews Section --- */
+
+.reviews ul {
+    list-style-type: disc; /* Use standard bullet points for reviews */
+    margin-left: 20px;
+}
+
+/* Ensure sections are displayed clearly on mobile */
+.reviews {
+    order: 3;
+}
+
+.upgrades {
+    order: 4;
+}
+
+/* --- Footer Styles --- */
+
+footer {
+    /* Ensures the footer spans the entire width */
+    width: 100%;
+    /* Add space above the footer to separate it from content */
+    margin-top: 10px;  
+    background-color: Black;
+    color: #00bcd4; 
+    font-size: large;
+    font-weight: bolder;
+    /* Padding above and below the text */
+    padding: 15px; 
+    /* Center the copyright text */
+    text-align: center;
+}
+
+.copyright {
+    /* Reset margins for clean centering */
+    margin: 0;
+    /* Smaller, less prominent text */
+    font-size: 0.85em; 
+    color: #00bcd4; 
+}
+
+/* --- Tablet and Desktop Styles (Large Viewport) --- */
+
+@media (min-width: 768px) {
+    .home {
+        max-width: 800px; /* Wider content area for desktop */
+        padding: 30px;
+    }
+
+    /* --- Intro Section (Desktop Layout) --- */
+    .delorean-section {
+        flex-direction: row; /* Image and info side-by-side */
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .delorean-info {
+       z-index: 1;
+        width: 40%;
+        padding-right: 20px;
+    }
+
+    .delorean-section img {
+        order: 2;
+        width: 60%;
+        margin-bottom: 0;
+    }
+
+    /* --- Two Column Layout for Reviews and Upgrades --- */
+
+    .home {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two main columns for content */
+        grid-template-rows: auto auto auto;
+        gap: 20px;
+    }
+
+    .intro {
+        grid-column: 1 / -1; /* Intro spans both columns */
+        grid-row: 1;
+    }
+
+    .reviews {
+        grid-column: 2 / 3; /* Reviews on the right */
+        grid-row: 2;
+        padding-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .upgrades {
+        grid-column: 1 / 2; /* Upgrades on the left */
+        grid-row: 2;
+        padding-right: 10px;
+        margin-bottom: 0;
+    }
+
+    /* Upgrades grid should have 2 columns inside its container on desktop */
+    .upgrade-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
