@@ -150,7 +150,8 @@ section {
 }
 
 .delorean-info ul {
-    color: #00bcd4; 
+    color: black; 
+    background-color:whitesmoke;
     font-weight: bold;
     margin-top: 5px;
     padding: 5px;
@@ -185,7 +186,7 @@ section {
 
 .upgrade-item {
     text-align: center;
-    background-color: #00bcd4;
+    background-color: rgb(223, 215, 215);
     padding: 10px;
     border-radius: 5px;
 }
@@ -230,7 +231,7 @@ footer {
     /* Add space above the footer to separate it from content */
     margin-top: 10px;  
     background-color: Black;
-    color: #00bcd4; 
+    color: white; 
     font-size: large;
     font-weight: bolder;
     /* Padding above and below the text */
@@ -244,7 +245,7 @@ footer {
     margin: 0;
     /* Smaller, less prominent text */
     font-size: 0.85em; 
-    color: #00bcd4; 
+    color: white; 
 }
 
 /* --- Tablet and Desktop Styles (Large Viewport) --- */
